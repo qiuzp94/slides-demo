@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.window{
+    width:384px;
+    height:384px;
+    margin:30px auto;
+    overflow:hidden;
+    border:10px solid #ccc;
+    border-radius: 10px;
+}
+.images{
+    position:relative;
+}
+.images > img {
+    width:100%;
+    position:absolute;
+    top:0;
+    transition:all 1500ms;
+}
+.images > img.current{
+    z-index:1;
+    left:0;
+    transform:translateX(0)
+}
+.images > img.leave{
+    z-index:1;
+    transform:translateX(-100%)
+}
+.images > img.enter{
+    transform:translateX(100%)
+}
